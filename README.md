@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Personal Blog App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
+The Personal Blog App is a streamlined, intuitive web application designed for effortless blog creation and management. Users can easily craft and publish their own articles, complete with customizable titles, rich content, and engaging images. Built with Tailwind CSS and ReactJS, this app ensures a modern and responsive design, enhancing the overall blogging experience. Whether sharing personal stories or insights, users can connect with their audience in a visually appealing and user-friendly environment.
 
-## Available Scripts
+# Technologies Used
+- **React**: A JavaScript library for building user interfaces, allowing for the creation of reusable UI components.
+- **Axios**: A promise-based HTTP client for the browser and Node.js, used to make API requests to the backend.
+- **JSON Server**: A simple way to set up a fake REST API with zero coding, allowing for easy data management during development.
+- **React Router**: A standard library for routing in React applications, enabling dynamic navigation between different components.
+- **Tailwind CSS**: A utility-first CSS framework for creating custom designs without having to leave your HTML.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+# Prerequisites
+- Node.js and npm installed on your machine.
+- A basic understanding of React and JavaScript.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Start JSON Server
+json-server --watch db.json --port 4000
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Set up JSON Server
+npm install -g json-server
 
-### `npm test`
+# Features
+ADD BLOG: Users can create new blog posts by completing a form that includes a title and content. The new post will be seamlessly integrated into the list of blogs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+EDIT BLOG: Users have the ability to modify existing blog posts. The application offers an option to update both the title and content of any post.
 
-### `npm run build`
+DELETE BLOG: Users can remove any blog post. Once deleted, the post will be permanently removed from the list.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+VIEW ALL BLOGS: Users can browse a comprehensive list of all blog posts in the application. Each post will display its title along with a brief excerpt of its content.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+VIEW SINGLE BLOG: Users can click on a blog post to access its full content on a separate page, providing a more detailed reading experience.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
