@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
 
-function App() {
+import React, { useState } from 'react';
+import Header from './component/navbar/Header';
+import { Route, Routes } from 'react-router-dom';
+import About from './pages/About';
+import EditData from './component/Editdata';
+import NewBlog from './component/NewBlog';
+import Blog from './pages/Blog';
+
+const App = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  const addBlog = (newBlog) => {
+    setBlogs((prevBlogs) => [...prevBlogs, newBlog]);
+    
+  };
+
+  const updateBlog = (updatedBlog) => {
+    setBlogs((prevBlogs) =>
+      prevBlogs.map((blog) => (blog.id === updatedBlog.id ? updatedBlog : blog))
+    );
+  };
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <Routes>
+        <Route path="/blog" element={<Blog blogs={blogs}/>} />
+        <Route path="/newBlog" element={<NewBlog addBlog={addBlog}/>} />
+        <Route path="/about/:id" element={<About />} />
+        <Route path="/editdata" element={<EditData updateBlog={updateBlog}/>} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
